@@ -18,9 +18,11 @@
  * SUCH DAMAGE.
  */
 
-#ifdef MAP_ANON
+#ifdef __unix__
 #include <sys/mman.h>
 #endif
+
+#include "yespower.h"
 
 #define HUGEPAGE_THRESHOLD		(12 * 1024 * 1024)
 
